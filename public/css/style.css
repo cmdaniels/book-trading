@@ -1,0 +1,35 @@
+p {
+  text-align: center;
+}
+
+h1 {
+  padding: 64px 0 0 0;
+  text-align: center;
+}
+
+.input-group {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.books {
+  padding-top: 16px;
+}
+
+.books .panel {
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+.books .panel p {
+  text-align: left;
+}
+
+.books .panel .panel-footer button,
+.books .panel .panel-footer p {
+  display: inline;
+}
+
+.books .panel .panel-footer p {
+  padding-left: 16px;
+}

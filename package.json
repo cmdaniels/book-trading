@@ -1,0 +1,24 @@
+{
+  "name": "book-trading",
+  "version": "1.0.0",
+  "description": "Trade books with people near you.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmdaniels/book-trading.git"
+  },
+  "author": "cmdaniels",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cmdaniels/book-trading/issues"
+  },
+  "homepage": "https://github.com/cmdaniels/book-trading#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
+}
