@@ -4,9 +4,23 @@
     <meta charset="utf-8">
     <title>Book Trading Club</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBQOpRdfEQ39JgCeysZNgF7bUlJS6AkbGs",
+        authDomain: "book-trading-club-51619.firebaseapp.com",
+        databaseURL: "https://book-trading-club-51619.firebaseio.com",
+        projectId: "book-trading-club-51619",
+        storageBucket: "book-trading-club-51619.appspot.com",
+        messagingSenderId: "819514754988"
+      };
+      firebase.initializeApp(config);
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -23,7 +37,7 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" onclick="login()" id="login">Login</a></li>
+            <li><a href="#" onclick="login()" id="login">Log In with Twitter <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
           </ul>
         </div>
       </div>
