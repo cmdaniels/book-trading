@@ -7,29 +7,29 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  text-align: center;
+
+}
+
 .input-group {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 }
 
 .books {
-  padding-top: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.books .panel {
-  max-width: 500px;
-  margin: 10px auto;
+.book {
+  max-width: 100px;
+  margin: 8px;
 }
 
-.books .panel p {
-  text-align: left;
-}
-
-.books .panel .panel-footer button,
-.books .panel .panel-footer p {
-  display: inline;
-}
-
-.books .panel .panel-footer p {
-  padding-left: 16px;
+.hidden {
+  display: none;
 }

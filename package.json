@@ -19,6 +19,7 @@
   "homepage": "https://github.com/cmdaniels/book-trading#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "google-books-search": "^0.3.1"
   }
 }

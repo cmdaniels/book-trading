@@ -23,6 +23,30 @@
     </script>
   </head>
   <body>
+    <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Settings: <span class="displayName"></span></h4>
+          </div>
+          <div class="modal-body">
+            <div class="input-group">
+              <span class="input-group-addon">City</span>
+              <input type="text" class="form-control" id="city" aria-describedby="basic-addon3">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">State</span>
+              <input type="text" class="form-control" id="state" aria-describedby="basic-addon3">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" onclick="updateSettings()">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -37,6 +61,7 @@
 
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
+            <li class="settings hidden"><a href="#" data-toggle="modal" data-target="#settingsModal">Settings <i class="fa fa-cog" aria-hidden="true"></i></a></li>
             <li><a href="#" onclick="login()" id="login">Log In with Twitter <i class="fa fa-twitter" aria-hidden="true"></i></a></li>
           </ul>
         </div>
@@ -46,13 +71,26 @@
       <div class="container">
         <h1>Book Trading Club</h1>
         <p>Trade books with people near you.</p>
-        <!-- <div class="input-group">
-          <input type="text" class="form-control" placeholder="Location" id="location"></input>
-          <span class="input-group-btn">
-            <button class="btn btn-primary" type="button" onclick="search()" id="seach">Search</button>
-          </span>
-        </div> -->
-        <div class="books"></div>
+        <h2>Available Books</h2>
+        <p class="hidden prompt">Click to request a book.</p>
+        <div class="books available"></div>
+        <div class="loggedIn hidden">
+          <h2>My Books</h2>
+          <p>Click to remove a book from your library.</p>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Book Title" id="bookTitle"></input>
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="button" onclick="addBook()" id="seach">Add Book</button>
+            </span>
+          </div>
+          <div class="books myBooks"></div>
+          <h2>Trade Requests</h2>
+          <p>Click to confirm a trade request.</p>
+          <div class="books tradeRequests"></div>
+          <h2>Borrowed Books</h2>
+          <p>Click to return a book.</p>
+          <div class="books tradedBooks"></div>
+        </div>
       </div>
     </main>
     <script src="js/index.js" charset="utf-8"></script>
